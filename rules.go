@@ -52,11 +52,11 @@ func (p *pattern) match(target string) []string {
 type rule struct {
 	targets    []pattern // non-empty array of targets
 	attributes attribSet // rule attributes
+	ismeta     bool      // is this a meta rule
 	prereqs    []string  // possibly empty prerequesites
 	shell      []string  // command used to execute the recipe
 	recipe     string    // recipe source
 	command    []string  // command attribute
-	ismeta     bool      // is this a meta rule
 	file       string    // file where the rule is defined
 	line       int       // line number on which the rule is defined
 }
