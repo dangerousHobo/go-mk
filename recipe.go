@@ -9,6 +9,7 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"strconv"
 	"strings"
 	"unicode/utf8"
 )
@@ -66,6 +67,7 @@ func printIndented(out io.Writer, s string, ind int) {
 func dorecipe(target string, u *node, e *edge, dryrun bool) bool {
 	vars := make(map[string][]string)
 	vars["target"] = []string{target}
+	vars["pid"] = []string{strconv.Itoa(os.Getpid())}
 	if e.r.ismeta {
 		if e.r.attributes.regex {
 			for i := range e.matches {
