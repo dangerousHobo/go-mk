@@ -10,7 +10,7 @@ is for anyone who loves make, but hates all its stupid bullshit.
 ## Installation
 
  1. Install Go.
- 2. Run `go get github.com/dcjones/mk`
+ 2. Run `go get github.com/dangeroushobo/mk`
  3. Make sure `$GOPATH/bin` is in your `PATH`.
 
 ### Building/installing from source
